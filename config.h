@@ -10,6 +10,7 @@
 #define ENCODER_MAX_COUNT 1000
 #define ENCODER_FILTER 10000 // in ns
 #define DEBOUNCE_COUNT 5 
+#define TIMEOUT_DURATION 3000000000 // in ns = 30 s
 
 // ----- Pin mappings -----
 // Use PIN_<DEVICE>_<FUNCTION> pattern
@@ -34,7 +35,8 @@ typedef enum {
 
 typedef enum {
   MODE_RECORD,
-  MODE_PLAYBACK
+  MODE_PLAYBACK,
+  MODE_SD_OCCUPIED
 } Mode;
 
 typedef enum {
@@ -50,6 +52,7 @@ typedef struct {
   uint8_t id; // Needed?
   InstrumentType instrument;
   TrackState state;
+  uint8_t volume;
 
   // Information about recording and cursor position?  
 } Track;
