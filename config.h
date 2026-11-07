@@ -10,6 +10,10 @@
 #define ENCODER_MAX_COUNT 1000
 #define ENCODER_FILTER 10000 // in ns
 #define DEBOUNCE_COUNT 5 
+#define LED_BRIGHTNESS 64
+#define LEDS_PER_TRACK 11 // 1 button led + 10 cursor leds
+#define NUM_LEDS 44 // 4 tracks * LEDS_PER_TRACK
+#define SAMPLES_PER_TRACK 10'000'000 // TODO: figure out what value should be
 
 // ----- Pin mappings -----
 // Use PIN_<DEVICE>_<FUNCTION> pattern
